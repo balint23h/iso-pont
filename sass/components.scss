@@ -1,0 +1,499 @@
+/*-----------------mixins------------------- format:shift+alt+f*/
+
+@mixin firstmainref {
+  width: 25%;
+  height: 50%;
+  background-size: cover;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transition: all 1s ease;
+  overflow: hidden;
+  @media only screen and (max-width: 920px) {
+    height: 0;
+  }
+  &:hover {
+    z-index: 10;
+  }
+}
+
+@mixin secondmainref {
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  left: 25%;
+  top: 0%;
+  transition: all 1s ease;
+  overflow: hidden;
+  @media only screen and (max-width: 920px) {
+    width: 100%;
+    left: 0%;
+    top: 0%;
+  }
+  &:hover {
+    z-index: 10;
+  }
+}
+
+@mixin thirdmainref {
+  width: 25%;
+  height: 50%;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  overflow: hidden;
+  @media only screen and (max-width: 920px) {
+    height: 0;
+  }
+  &:hover {
+    z-index: 10;
+  }
+}
+
+@mixin fourthmainref {
+  width: 25%;
+  height: 50%;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transition: all 1s ease;
+  overflow: hidden;
+  @media only screen and (max-width: 920px) {
+    height: 0;
+  }
+  &:hover {
+    z-index: 10;
+  }
+}
+
+@mixin fifthmainref {
+  width: 25%;
+  height: 50%;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transition: all 1s ease;
+  overflow: hidden;
+  @media only screen and (max-width: 920px) {
+    height: 0;
+  }
+  &:hover {
+    z-index: 10;
+  }
+}
+
+/*---------------mixins------------------*/
+
+html {
+  overflow-x: hidden;
+}
+
+
+
+.split {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    @media only screen and (max-width: 820px) {
+      height: 25vh;
+    }
+
+    @media only screen and (max-width: 540px) {
+      height: 50vh;
+    }
+
+    &--first {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/utolagosfalszig.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--second {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/teto.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    &--third {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/epito.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    &--fourth {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/hoszig.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &__button {
+    z-index: 100;
+    position: absolute;
+    left: 50%; /* horizontal alignment */
+    top: 50%; /* vertical alignment */
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 200;
+    // color: #e8e4c9;
+    color: rgba(211, 211, 211, 0.8);
+    text-decoration: none;
+    text-shadow: 2px 2px #191919;
+
+    text-transform: uppercase;
+    transition: all 0.3s;
+
+    &:hover {
+      color: rgba(211, 211, 211, 1);
+      border-bottom: 1px solid rgba(211, 211, 211, 0.8);
+      text-shadow: none;
+      // padding-bottom: 5px;
+    }
+
+    @media only screen and (max-width: 1020px) {
+      font-size: 2.4rem;
+    }
+  }
+
+  
+
+  &__contact {
+    z-index: 100;
+    position: absolute;
+    right: 0%;
+    top: 5%;
+
+    height: 8rem;
+    width: 16rem;
+    padding: 2rem 4rem;
+    text-align: center;
+
+    font-size: 2rem;
+    font-weight: 400;
+    // color: #e8e4c9;
+    color: rgba(211, 211, 211, 0.85);
+    text-decoration: none;
+    background: rgba(25, 25, 25, 0.95);
+    transition: all 0.3s;
+    position: fixed;
+// TEST
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    top: 0%;
+    width: 18rem;
+
+
+
+
+
+    &:hover {
+      color: rgba(211, 211, 211, 1);
+      background: rgba(25, 25, 25, 1);
+    }
+
+    &--iso{
+    left: 0%;
+    top: 0%;
+    width: 20rem;
+    position: absolute;
+    padding: 2rem 4rem 2rem 2rem;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 74% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 74% 100%, 0% 100%);
+    
+    }
+
+    @media only screen and (max-width: 1020px) {
+      font-size: 1.8rem;
+
+      height: 6rem;
+      width: 12rem;
+      padding: 1.5rem 2rem;
+      text-align: center;
+    }
+
+    @media only screen and (max-width: 820px) {
+      font-size: 1.6rem;
+
+      height: 5rem;
+      width: 10rem;
+      padding: 1.2rem 2rem;
+      text-align: center;
+
+      right: 0%;
+      top: 0%;
+    }
+
+    @media only screen and (max-width: 540px) {
+      font-size: 1.2rem;
+
+      height: 5rem;
+      width: 10rem;
+      padding: 1.2rem 2rem;
+      text-align: center;
+
+      right: 0%;
+      top: 0%;
+    }
+  }
+
+  @media only screen and (max-width: 820px) {
+    flex-direction: column;
+    width: 100%;
+    background-size: cover;
+  }
+}
+
+h2 {
+  font-family: "Cinzel", serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 3rem;
+  text-align: center;
+  margin: 7rem 0rem 2.6rem 0rem;
+
+  @media only screen and (max-width: 820px) {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+  }
+
+  @media only screen and (max-width: 540px) {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.h2__line {
+  margin: 0 auto;
+  width: 10rem;
+  height: 1px;
+  background: black;
+}
+
+h3 {
+  font-family: "Cinzel", serif;
+  font-weight: 200;
+  font-size: 2rem;
+  text-align: center;
+  margin: 6rem 0rem 10rem 0rem;
+
+  @media only screen and (max-width: 820px) {
+    margin: 6rem 0rem 10rem 0rem;
+  }
+
+  @media only screen and (max-width: 540px) {
+    margin: 3rem 0rem 2rem 0rem;
+  }
+
+  @media only screen and (max-width: 300px) {
+    margin: 3rem 0rem 12rem 0rem;
+  }
+}
+
+.references {
+  // min-height: 50rem; //test
+  // margin-top: 10rem;
+
+  &__first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 3rem;
+    height: 60vh;
+
+    &--image {
+      width: 55%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+
+      @media only screen and (max-width: 920px) {
+        width: 45%;
+      }
+
+      @media only screen and (max-width: 540px) {
+        width: 0;
+        height: 0;
+      }
+
+      /*----main reference picture styles---------*/
+
+      /*----utólagos falszigetelés---------*/
+
+      &-1 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference1.jpg");
+        @include firstmainref;
+      }
+
+      &-2 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference2.jpg");
+        @include secondmainref;
+      }
+
+      &-3 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference3.jpg");
+        @include thirdmainref;
+      }
+
+      &-4 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference4.jpg");
+        @include fourthmainref;
+      }
+
+      &-5 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference5.jpg");
+        @include fifthmainref;
+      }
+
+      /*----utólagos falszigetelés---------*/
+
+      /*----tetőszigetelés---------*/
+
+      &-6 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference6.jpg");
+        @include firstmainref;
+      }
+
+      &-7 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference7.jpg");
+        @include secondmainref;
+      }
+
+      &-8 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference8.jpg");
+        @include thirdmainref;
+      }
+
+      &-9 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference9.jpg");
+        @include fourthmainref;
+      }
+
+      &-10 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference10.jpg");
+        @include fifthmainref;
+      }
+
+      /*----tetőszigetelés---------*/
+
+      /*----építőmesteri munkák---------*/
+      &-11 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference11.jpg");
+        @include firstmainref;
+      }
+
+      &-12 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference12.jpg");
+        @include secondmainref;
+      }
+
+      &-13 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference13.jpg");
+        @include thirdmainref;
+      }
+
+      &-14 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference14.jpg");
+        @include fourthmainref;
+      }
+
+      &-15 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference15.jpg");
+        @include fifthmainref;
+      }
+      /*----építőmesteri munkák---------*/
+
+      /*----homlokzati hőszigetelés---------*/
+      &-16 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference16.jpg");
+        @include firstmainref;
+      }
+
+      &-17 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference17.jpg");
+        @include secondmainref;
+      }
+
+      &-18 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference18.jpg");
+        @include thirdmainref;
+      }
+
+      &-19 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference19.jpg");
+        @include fourthmainref;
+      }
+
+      &-20 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference20.jpg");
+        @include fifthmainref;
+      }
+      /*----homlokzati hőszigetelés---------*/
+
+
+
+      /*----main reference picture styles---------*/
+    }
+
+    &--text {
+      font-size: 2rem;
+      width: 40%;
+
+      font-family: "Playfair Display", serif;
+      // background-color: #191919;
+      // color: #fff;
+
+      line-height: 2;
+      text-align: center;
+      color: rgba(82, 82, 82, 1);
+
+      @media only screen and (max-width: 1020px) {
+        font-size: 1.9rem;
+        line-height: 3.5rem;
+      }
+
+      @media only screen and (max-width: 920px) {
+        font-size: 1.8rem;
+        line-height: 3rem;
+        width: 50%;
+      }
+
+      @media only screen and (max-width: 650px) {
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        width: 50%;
+      }
+
+      @media only screen and (max-width: 540px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .ref__title {
+    height: 3rem;
+    width: 100%;
+    color: rgba(211, 211, 211, 0.85);
+    text-align: left;
+    margin: 0 auto;
+    padding: 0.3rem 0.3rem;
+    font-size: 1.7rem;
+    background: rgba(25, 25, 25, 1);
+    position: absolute;
+    bottom: 0%;
+    z-index: -10;
+  }
+}

@@ -1,0 +1,456 @@
+
+    .moreref{
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(25, 25, 25, .9);
+        z-index: 4000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all ease-in-out .3s;
+        color: rgba(82, 82, 82, 1);
+    
+        &:target{
+            opacity: 1;
+            visibility: visible;
+        }
+    
+        &__close{
+            &:link,
+            &:visited{
+                
+                position: absolute;
+                top: -2.2rem;
+                right: 0.1rem;
+                font-size: 4.5rem;
+                text-decoration: none;
+                display: inline-block;
+                color: rgba(82, 82, 82, 1);
+
+                @media only screen and (max-width: 1200px){
+                    top: .5rem;
+                    right: 2.5rem;
+                }
+
+                @media only screen and (max-width: 1020px){
+                    top: -2rem;
+                    right: 0.5rem;
+                }
+
+                @media only screen and (max-width: 820px){
+                    top: .5rem;
+                    right: 2rem;
+                }
+
+                @media only screen and (max-width: 650px){
+                    top: -2rem;
+                    right: 0.5rem;
+                }
+    
+            }
+    
+            &:hover{
+                color: rgba(82, 82, 82, .3)
+            }
+
+            
+        }
+
+        &__content{
+
+            width: 80%;
+            padding: 1rem 1rem;
+            
+            background-color: rgba(211, 211, 211, 1);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 3px;
+
+            @media only screen and (max-width: 820px){
+                width: 100%;
+                height: auto;
+            }
+
+            @media only screen and (max-width: 540px){
+                display: flex;
+            }
+
+            
+
+            
+
+        
+            &--image{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                
+                &--6{
+                    background-image: linear-gradient(rgba(0, 0, 0, 0), 
+                     rgba(0, 0, 0, 0)),url('../img/hoszig_ref/6.jpg'); 
+                    /*width: 18rem; // try with %!!!!
+                    height: 18rem;*/
+                    width: 18%;
+                    margin: 1rem 1rem;
+                    background-size: cover;
+                    transition: .3s ease-in-out;
+                    &:hover{
+                        transform:  scale(1.08);
+                    }
+
+                    @media only screen and (max-width: 1020px){
+                        width: 30%;
+                    }
+
+                    @media only screen and (max-width: 820px){
+                        width: 20%;
+                    }
+
+                    @media only screen and (max-width: 650px){
+                        height: 30%;
+                    }
+
+                    @media only screen and (max-width: 540px){
+                        width: 40%;
+                    }
+
+                } 
+
+                &--7{
+                    background-image: linear-gradient(rgba(0, 0, 0, 0), 
+                     rgba(0, 0, 0, 0)),url('../img/hoszig_ref/7.jpg'); 
+                    /*width: 18rem;
+                    height: 18rem;*/
+                    width: 18%;
+                    margin: 1rem 1rem;
+                    background-size: cover;
+                    transition: .3s ease-in-out;
+                    &:hover{
+                        transform:  scale(1.08);
+                    }
+
+                    @media only screen and (max-width: 1020px){
+                        width: 30%;
+                    }
+
+                    @media only screen and (max-width: 820px){
+                        width: 20%;
+                    }
+
+                    @media only screen and (max-width: 650px){
+                        height: 30%;
+                    }
+
+                    @media only screen and (max-width: 540px){
+                        width: 40%;
+                    }
+
+                } 
+
+                &--8{
+                    background-image: linear-gradient(rgba(0, 0, 0, 0), 
+                     rgba(0, 0, 0, 0)),url('../img/hoszig_ref/8.jpg'); 
+                    /*width: 18rem;
+                    height: 18rem;*/
+                    width: 18%;
+                    margin: 1rem 1rem;
+                    background-size: cover;
+                    transition: .3s ease-in-out;
+                    &:hover{
+                        transform:  scale(1.08);
+                    }
+
+                    @media only screen and (max-width: 1020px){
+                        width: 30%;
+                    }
+
+                    @media only screen and (max-width: 820px){
+                        width: 20%;
+                    }
+
+                    @media only screen and (max-width: 650px){
+                        height: 30%;
+                    }
+
+                    @media only screen and (max-width: 540px){
+                        width: 40%;
+                    }
+
+                } 
+
+                &--9{
+                    background-image: linear-gradient(rgba(0, 0, 0, 0), 
+                     rgba(0, 0, 0, 0)),url('../img/hoszig_ref/9.jpg'); 
+                    /*width: 18rem;
+                    height: 18rem;*/
+                    width: 18%;
+                    margin: 1rem 1rem;
+                    background-size: cover;
+                    transition: .3s ease-in-out;
+                    &:hover{
+                        transform:  scale(1.08);
+                    }
+
+                    @media only screen and (max-width: 1020px){
+                        width: 30%;
+                    }
+
+                    @media only screen and (max-width: 820px){
+                        width: 20%;
+                    }
+
+                    @media only screen and (max-width: 650px){
+                        height: 30%;
+                    }
+
+                    @media only screen and (max-width: 540px){
+                        width: 40%;
+                    }
+
+                } 
+
+                &--10{
+                    background-image: linear-gradient(rgba(0, 0, 0, 0), 
+                     rgba(0, 0, 0, 0)),url('../img/hoszig_ref/10.jpg'); 
+                    /*width: 18rem;
+                    height: 18rem;*/
+                    width: 18%;
+                    margin: 1rem 1rem;
+                    background-size: cover;
+                    transition: .3s ease-in-out;
+                    &:hover{
+                        transform:  scale(1.08);
+                    }
+
+                    @media only screen and (max-width: 1020px){
+                        width: 30%;
+                    }
+
+                    @media only screen and (max-width: 820px){
+                        width: 20%;
+                    }
+
+                    @media only screen and (max-width: 650px){
+                        height: 30%;
+                    }
+
+                    @media only screen and (max-width: 540px){
+                        width: 40%;
+                    }
+
+                } 
+
+                &--11{
+                    background-image: linear-gradient(rgba(0, 0, 0, 0), 
+                     rgba(0, 0, 0, 0)),url('../img/hoszig_ref/11.jpg'); 
+                    /*width: 18rem;
+                    height: 18rem;*/
+                    width: 18%;
+                    margin: 1rem 1rem;
+                    background-size: cover;
+                    transition: .3s ease-in-out;
+                    &:hover{
+                        transform:  scale(1.08);
+                    }
+
+                    @media only screen and (max-width: 1020px){
+                        width: 30%;
+                    }
+
+                    @media only screen and (max-width: 820px){
+                        width: 20%;
+                    }
+
+                    @media only screen and (max-width: 650px){
+                        height: 30%;
+                    }
+
+                    @media only screen and (max-width: 540px){
+                        width: 40%;
+                    }
+
+                } 
+
+                &--12{
+                    background-image: linear-gradient(rgba(0, 0, 0, 0), 
+                     rgba(0, 0, 0, 0)),url('../img/hoszig_ref/12.jpg'); 
+                    /*width: 18rem;
+                    height: 18rem;*/
+                    width: 18%;
+                    margin: 1rem 1rem;
+                    background-size: cover;
+                    transition: .3s ease-in-out;
+                    &:hover{
+                        transform:  scale(1.08);
+                    }
+
+                    @media only screen and (max-width: 1020px){
+                        width: 30%;
+                    }
+
+                    @media only screen and (max-width: 820px){
+                        width: 20%;
+                    }
+
+                    @media only screen and (max-width: 650px){
+                        height: 30%;
+                    }
+
+                    @media only screen and (max-width: 540px){
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        bottom: 0;
+                    }
+
+                } 
+
+                &--13{
+                    background-image: linear-gradient(rgba(0, 0, 0, 0), 
+                     rgba(0, 0, 0, 0)),url('../img/hoszig_ref/13.jpg'); 
+                    /*width: 18rem;
+                    height: 18rem;*/
+                    width: 18%;
+                    margin: 1rem 1rem;
+                    background-size: cover;
+                    transition: .3s ease-in-out;
+                    &:hover{
+                        transform:  scale(1.08);
+                    }
+
+                    @media only screen and (max-width: 1020px){
+                        width: 30%;
+                    }
+
+                    @media only screen and (max-width: 820px){
+                        width: 20%;
+                    }
+
+                    @media only screen and (max-width: 650px){
+                        height: 30%;
+                    }
+
+                    @media only screen and (max-width: 540px){
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        bottom: 0;
+                    }
+
+                } 
+
+                &--14{
+                    background-image: linear-gradient(rgba(0, 0, 0, 0), 
+                     rgba(0, 0, 0, 0)),url('../img/hoszig_ref/14.jpg'); 
+                    /*width: 18rem;
+                    height: 18rem;*/
+                    width: 18%;
+                    margin: 1rem 1rem;
+                    background-size: cover;
+                    transition: .3s ease-in-out;
+                    &:hover{
+                        transform:  scale(1.08);
+                    }
+
+                    @media only screen and (max-width: 1020px){
+                        width: 30%;
+                    }
+
+                    @media only screen and (max-width: 820px){
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        bottom: 0;
+                    }
+
+                } 
+
+                &--15{
+                    background-image: linear-gradient(rgba(0, 0, 0, 0), 
+                     rgba(0, 0, 0, 0)),url('../img/hoszig_ref/15.jpg'); 
+                    /*width: 18rem;
+                    height: 18rem;*/
+                    width: 18%;
+                    margin: 1rem 1rem;
+                    background-size: cover;
+                    transition: .3s ease-in-out;
+                    &:hover{
+                        transform:  scale(1.08);
+                    }
+
+                    @media only screen and (max-width: 1020px){
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        bottom: 0;
+                    }
+                }  
+            }
+        }        
+    }
+
+
+   // style of the more references button
+   
+   .more__references{
+    display: flex;
+    border-radius: 4px;
+    margin: 2rem auto;
+    width: 40%;
+    height: 6rem;
+    font-size: 2rem;
+    justify-content: center;
+    text-align: center;
+    padding-top: 1rem;
+    color: rgba(211, 211, 211, .85);
+    text-decoration: none;
+    background: rgba(25, 25, 25, .95);
+    transition: all .3s;
+
+    @media only screen and (max-width: 1200px){
+        font-size: 1.6rem;
+        margin: 1.5rem auto;
+    }
+
+    @media only screen and (max-width: 920px){
+        font-size: 1.6rem;
+        padding-top: .5rem;
+        height: 7rem;
+    }
+    
+
+    &:hover{
+        color: rgba(211, 211, 211, 1);
+        background: rgba(25, 25, 25, 1);
+    }
+   }
+
+
+   //media queries for more references//
+    .rozamester{
+       height: 3rem;
+         width: 100%;
+         color: rgba(211, 211, 211, .85);
+        margin-top: 15.3rem;
+         padding: .3rem .3rem;
+         font-size: 1.7rem;
+         background: rgba(25, 25, 25, 1);
+         overflow: hidden;
+
+         @media only screen and (max-width: 650px){
+            height: 2.2rem;
+            font-size: 1.4rem;
+            margin-top: 12.2rem;
+        }
+   }
+
+   
+   
+    

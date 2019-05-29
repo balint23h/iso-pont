@@ -1,0 +1,36 @@
+
+.footer{
+    background-color: rgba(25, 25, 25, 0.95);
+    font-size: 1.4rem;
+    width: 100%;
+    display: flex;
+    margin-top: 20rem;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 920px){
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    
+    
+
+    &-item{
+        text-decoration: none;
+        list-style-type: none;
+        padding: 2rem 2rem;
+        vertical-align: middle;
+        text-align: left;
+        //transform: translateY(0%); 
+        color: rgba(211, 211, 211, 0.85);
+        line-height: 3rem;
+
+        @media only screen and (max-width: 920px){
+            margin: 0 auto;
+        }
+    }
+
+    
+}
+    
+        

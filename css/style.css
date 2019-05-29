@@ -1,0 +1,695 @@
+@charset "UTF-8";
+/*font-family: 'Playfair Display', serif;
+font-size: 14px;
+letter-spacing: 0.1em;
+font-style: italic;
+
+font-family: 'Cinzel', serif;*/
+:root {
+  --color-primary: #fff; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Playfair Display';
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: rgba(232, 232, 215, 0.4);
+  min-height: 100vh;
+  overflow-x: hidden; }
+
+.container {
+  position: relative; }
+
+/*-----------------mixins------------------- format:shift+alt+f*/
+/*---------------mixins------------------*/
+html {
+  overflow-x: hidden; }
+
+.split {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .split__image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; }
+    @media only screen and (max-width: 820px) {
+      .split__image {
+        height: 25vh; } }
+    @media only screen and (max-width: 540px) {
+      .split__image {
+        height: 50vh; } }
+    .split__image--first {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/utolagosfalszig.jpg");
+      background-position: center;
+      background-size: cover; }
+    .split__image--second {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/teto.jpg");
+      background-size: cover;
+      background-position: center; }
+    .split__image--third {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/epito.jpg");
+      background-size: cover;
+      background-position: center; }
+    .split__image--fourth {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/hoszig.jpg");
+      background-size: cover;
+      background-position: center; }
+  .split__button {
+    z-index: 100;
+    position: absolute;
+    left: 50%;
+    /* horizontal alignment */
+    top: 50%;
+    /* vertical alignment */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 200;
+    color: rgba(211, 211, 211, 0.8);
+    text-decoration: none;
+    text-shadow: 2px 2px #191919;
+    text-transform: uppercase;
+    transition: all 0.3s; }
+    .split__button:hover {
+      color: lightgray;
+      border-bottom: 1px solid rgba(211, 211, 211, 0.8);
+      text-shadow: none; }
+    @media only screen and (max-width: 1020px) {
+      .split__button {
+        font-size: 2.4rem; } }
+  .split__contact {
+    z-index: 100;
+    position: absolute;
+    right: 0%;
+    top: 5%;
+    height: 8rem;
+    width: 16rem;
+    padding: 2rem 4rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    color: rgba(211, 211, 211, 0.85);
+    text-decoration: none;
+    background: rgba(25, 25, 25, 0.95);
+    transition: all 0.3s;
+    position: fixed;
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    top: 0%;
+    width: 18rem; }
+    .split__contact:hover {
+      color: lightgray;
+      background: #191919; }
+    .split__contact--iso {
+      left: 0%;
+      top: 0%;
+      width: 20rem;
+      position: absolute;
+      padding: 2rem 4rem 2rem 2rem;
+      -webkit-clip-path: polygon(0 0, 100% 0%, 74% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0%, 74% 100%, 0% 100%); }
+    @media only screen and (max-width: 1020px) {
+      .split__contact {
+        font-size: 1.8rem;
+        height: 6rem;
+        width: 12rem;
+        padding: 1.5rem 2rem;
+        text-align: center; } }
+    @media only screen and (max-width: 820px) {
+      .split__contact {
+        font-size: 1.6rem;
+        height: 5rem;
+        width: 10rem;
+        padding: 1.2rem 2rem;
+        text-align: center;
+        right: 0%;
+        top: 0%; } }
+    @media only screen and (max-width: 540px) {
+      .split__contact {
+        font-size: 1.2rem;
+        height: 5rem;
+        width: 10rem;
+        padding: 1.2rem 2rem;
+        text-align: center;
+        right: 0%;
+        top: 0%; } }
+  @media only screen and (max-width: 820px) {
+    .split {
+      flex-direction: column;
+      width: 100%;
+      background-size: cover; } }
+
+h2 {
+  font-family: "Cinzel", serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 3rem;
+  text-align: center;
+  margin: 7rem 0rem 2.6rem 0rem; }
+  @media only screen and (max-width: 820px) {
+    h2 {
+      font-size: 2.8rem;
+      margin-bottom: 2rem; } }
+  @media only screen and (max-width: 540px) {
+    h2 {
+      margin-bottom: 2.4rem; } }
+
+.h2__line {
+  margin: 0 auto;
+  width: 10rem;
+  height: 1px;
+  background: black; }
+
+h3 {
+  font-family: "Cinzel", serif;
+  font-weight: 200;
+  font-size: 2rem;
+  text-align: center;
+  margin: 6rem 0rem 10rem 0rem; }
+  @media only screen and (max-width: 820px) {
+    h3 {
+      margin: 6rem 0rem 10rem 0rem; } }
+  @media only screen and (max-width: 540px) {
+    h3 {
+      margin: 3rem 0rem 2rem 0rem; } }
+  @media only screen and (max-width: 300px) {
+    h3 {
+      margin: 3rem 0rem 12rem 0rem; } }
+
+.references__first {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 3rem;
+  height: 60vh; }
+  .references__first--image {
+    width: 55%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    /*----main reference picture styles---------*/
+    /*----utólagos falszigetelés---------*/
+    /*----utólagos falszigetelés---------*/
+    /*----tetőszigetelés---------*/
+    /*----tetőszigetelés---------*/
+    /*----építőmesteri munkák---------*/
+    /*----építőmesteri munkák---------*/
+    /*----homlokzati hőszigetelés---------*/
+    /*----homlokzati hőszigetelés---------*/
+    /*----main reference picture styles---------*/ }
+    @media only screen and (max-width: 920px) {
+      .references__first--image {
+        width: 45%; } }
+    @media only screen and (max-width: 540px) {
+      .references__first--image {
+        width: 0;
+        height: 0; } }
+    .references__first--image-1 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference1.jpg");
+      width: 25%;
+      height: 50%;
+      background-size: cover;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      transition: all 1s ease;
+      overflow: hidden; }
+      @media only screen and (max-width: 920px) {
+        .references__first--image-1 {
+          height: 0; } }
+      .references__first--image-1:hover {
+        z-index: 10; }
+    .references__first--image-2 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference2.jpg");
+      width: 50%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      left: 25%;
+      top: 0%;
+      transition: all 1s ease;
+      overflow: hidden; }
+      @media only screen and (max-width: 920px) {
+        .references__first--image-2 {
+          width: 100%;
+          left: 0%;
+          top: 0%; } }
+      .references__first--image-2:hover {
+        z-index: 10; }
+    .references__first--image-3 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference3.jpg");
+      width: 25%;
+      height: 50%;
+      background-size: cover;
+      position: absolute;
+      right: 0;
+      transition: all 1s ease;
+      overflow: hidden; }
+      @media only screen and (max-width: 920px) {
+        .references__first--image-3 {
+          height: 0; } }
+      .references__first--image-3:hover {
+        z-index: 10; }
+    .references__first--image-4 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference4.jpg");
+      width: 25%;
+      height: 50%;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      transition: all 1s ease;
+      overflow: hidden; }
+      @media only screen and (max-width: 920px) {
+        .references__first--image-4 {
+          height: 0; } }
+      .references__first--image-4:hover {
+        z-index: 10; }
+    .references__first--image-5 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference5.jpg");
+      width: 25%;
+      height: 50%;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      right: 0%;
+      transition: all 1s ease;
+      overflow: hidden; }
+      @media only screen and (max-width: 920px) {
+        .references__first--image-5 {
+          height: 0; } }
+      .references__first--image-5:hover {
+        z-index: 10; }
+    .references__first--image-6 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference6.jpg");
+      width: 25%;
+      height: 50%;
+      background-size: cover;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      transition: all 1s ease;
+      overflow: hidden; }
+      @media only screen and (max-width: 920px) {
+        .references__first--image-6 {
+          height: 0; } }
+      .references__first--image-6:hover {
+        z-index: 10; }
+    .references__first--image-7 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference7.jpg");
+      width: 50%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      left: 25%;
+      top: 0%;
+      transition: all 1s ease;
+      overflow: hidden; }
+      @media only screen and (max-width: 920px) {
+        .references__first--image-7 {
+          width: 100%;
+          left: 0%;
+          top: 0%; } }
+      .references__first--image-7:hover {
+        z-index: 10; }
+    .references__first--image-8 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference8.jpg");
+      width: 25%;
+      height: 50%;
+      background-size: cover;
+      position: absolute;
+      right: 0;
+      transition: all 1s ease;
+      overflow: hidden; }
+      @media only screen and (max-width: 920px) {
+        .references__first--image-8 {
+          height: 0; } }
+      .references__first--image-8:hover {
+        z-index: 10; }
+    .references__first--image-9 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference9.jpg");
+      width: 25%;
+      height: 50%;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      transition: all 1s ease;
+      overflow: hidden; }
+      @media only screen and (max-width: 920px) {
+        .references__first--image-9 {
+          height: 0; } }
+      .references__first--image-9:hover {
+        z-index: 10; }
+    .references__first--image-10 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference10.jpg");
+      width: 25%;
+      height: 50%;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      right: 0%;
+      transition: all 1s ease;
+      overflow: hidden; }
+      @media only screen and (max-width: 920px) {
+        .references__first--image-10 {
+          height: 0; } }
+      .references__first--image-10:hover {
+        z-index: 10; }
+    .references__first--image-11 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference11.jpg");
+      width: 25%;
+      height: 50%;
+      background-size: cover;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      transition: all 1s ease;
+      overflow: hidden; }
+      @media only screen and (max-width: 920px) {
+        .references__first--image-11 {
+          height: 0; } }
+      .references__first--image-11:hover {
+        z-index: 10; }
+    .references__first--image-12 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference12.jpg");
+      width: 50%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      left: 25%;
+      top: 0%;
+      transition: all 1s ease;
+      overflow: hidden; }
+      @media only screen and (max-width: 920px) {
+        .references__first--image-12 {
+          width: 100%;
+          left: 0%;
+          top: 0%; } }
+      .references__first--image-12:hover {
+        z-index: 10; }
+    .references__first--image-13 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference13.jpg");
+      width: 25%;
+      height: 50%;
+      background-size: cover;
+      position: absolute;
+      right: 0;
+      transition: all 1s ease;
+      overflow: hidden; }
+      @media only screen and (max-width: 920px) {
+        .references__first--image-13 {
+          height: 0; } }
+      .references__first--image-13:hover {
+        z-index: 10; }
+    .references__first--image-14 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference14.jpg");
+      width: 25%;
+      height: 50%;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      transition: all 1s ease;
+      overflow: hidden; }
+      @media only screen and (max-width: 920px) {
+        .references__first--image-14 {
+          height: 0; } }
+      .references__first--image-14:hover {
+        z-index: 10; }
+    .references__first--image-15 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference15.jpg");
+      width: 25%;
+      height: 50%;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      right: 0%;
+      transition: all 1s ease;
+      overflow: hidden; }
+      @media only screen and (max-width: 920px) {
+        .references__first--image-15 {
+          height: 0; } }
+      .references__first--image-15:hover {
+        z-index: 10; }
+    .references__first--image-16 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference16.jpg");
+      width: 25%;
+      height: 50%;
+      background-size: cover;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      transition: all 1s ease;
+      overflow: hidden; }
+      @media only screen and (max-width: 920px) {
+        .references__first--image-16 {
+          height: 0; } }
+      .references__first--image-16:hover {
+        z-index: 10; }
+    .references__first--image-17 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference17.jpg");
+      width: 50%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      left: 25%;
+      top: 0%;
+      transition: all 1s ease;
+      overflow: hidden; }
+      @media only screen and (max-width: 920px) {
+        .references__first--image-17 {
+          width: 100%;
+          left: 0%;
+          top: 0%; } }
+      .references__first--image-17:hover {
+        z-index: 10; }
+    .references__first--image-18 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference18.jpg");
+      width: 25%;
+      height: 50%;
+      background-size: cover;
+      position: absolute;
+      right: 0;
+      transition: all 1s ease;
+      overflow: hidden; }
+      @media only screen and (max-width: 920px) {
+        .references__first--image-18 {
+          height: 0; } }
+      .references__first--image-18:hover {
+        z-index: 10; }
+    .references__first--image-19 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference19.jpg");
+      width: 25%;
+      height: 50%;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      transition: all 1s ease;
+      overflow: hidden; }
+      @media only screen and (max-width: 920px) {
+        .references__first--image-19 {
+          height: 0; } }
+      .references__first--image-19:hover {
+        z-index: 10; }
+    .references__first--image-20 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/reference20.jpg");
+      width: 25%;
+      height: 50%;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      right: 0%;
+      transition: all 1s ease;
+      overflow: hidden; }
+      @media only screen and (max-width: 920px) {
+        .references__first--image-20 {
+          height: 0; } }
+      .references__first--image-20:hover {
+        z-index: 10; }
+  .references__first--text {
+    font-size: 2rem;
+    width: 40%;
+    font-family: "Playfair Display", serif;
+    line-height: 2;
+    text-align: center;
+    color: #525252; }
+    @media only screen and (max-width: 1020px) {
+      .references__first--text {
+        font-size: 1.9rem;
+        line-height: 3.5rem; } }
+    @media only screen and (max-width: 920px) {
+      .references__first--text {
+        font-size: 1.8rem;
+        line-height: 3rem;
+        width: 50%; } }
+    @media only screen and (max-width: 650px) {
+      .references__first--text {
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        width: 50%; } }
+    @media only screen and (max-width: 540px) {
+      .references__first--text {
+        width: 100%; } }
+
+.references .ref__title {
+  height: 3rem;
+  width: 100%;
+  color: rgba(211, 211, 211, 0.85);
+  text-align: left;
+  margin: 0 auto;
+  padding: 0.3rem 0.3rem;
+  font-size: 1.7rem;
+  background: #191919;
+  position: absolute;
+  bottom: 0%;
+  z-index: -10; }
+
+.split__image--first, .split__image--second, .split__image--third,
+.split__image--fourth, .split__image--second:before, .split__image--first:before,
+.split__image--third:before, .split__image--fourth:before {
+  transition: var(--speed) all ease-in-out; }
+
+/*I hover over the first element*/
+.hover-first {
+  width: var(--hover-width);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/utolagosfalszig.jpg");
+  background-size: cover; }
+  @media only screen and (max-width: 820px) {
+    .hover-first {
+      width: 100%; } }
+
+/*I hover over the second element*/
+.hover-second {
+  width: var(--hover-width);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/teto.jpg"); }
+  @media only screen and (max-width: 820px) {
+    .hover-second {
+      width: 100%; } }
+
+/*I hover over the third element*/
+.hover-third {
+  width: var(--hover-width);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/epito.jpg"); }
+  @media only screen and (max-width: 820px) {
+    .hover-third {
+      width: 100%; } }
+
+/*I hover over the fourth element*/
+.hover-fourth {
+  width: var(--hover-width);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hoszig.jpg"); }
+  @media only screen and (max-width: 820px) {
+    .hover-fourth {
+      width: 100%; } }
+
+:root {
+  /*hover*/
+  --hover-width: 140%;
+  --other-width: 20%;
+  --speed: 1000ms; }
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(25, 25, 25, 0.9);
+  z-index: 4000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in-out .3s;
+  color: #525252; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup__close:link, .popup__close:visited {
+    position: absolute;
+    top: 0rem;
+    right: 1rem;
+    font-size: 4.5rem;
+    text-decoration: none;
+    display: inline-block;
+    color: #525252; }
+  .popup__close:hover {
+    color: rgba(82, 82, 82, 0.3); }
+  .popup__content {
+    width: 75%;
+    height: 60rem;
+    background-color: lightgray;
+    box-shadow: 0 2rem 4rem rgba(25, 25, 25, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 3px; }
+    @media only screen and (max-width: 820px) {
+      .popup__content {
+        width: 100%; } }
+    .popup__content--text {
+      font-family: 'Cinzel', serif;
+      text-align: center;
+      margin: 0 auto; }
+      .popup__content--text-heading {
+        font-family: 'Playfair Display', serif;
+        font-weight: 300;
+        font-size: 2.2rem;
+        text-align: center;
+        margin: 4.2rem 3rem 2rem 3rem; }
+        @media only screen and (max-width: 540px) {
+          .popup__content--text-heading {
+            font-size: 0rem; } }
+      .popup__content--text-contacts {
+        font-family: 'Playfair Display', serif;
+        font-weight: 200;
+        font-size: 1.8rem;
+        text-align: center;
+        margin: 2rem 2rem; }
+        @media only screen and (max-width: 540px) {
+          .popup__content--text-contacts {
+            font-size: 1.6rem; } }
+
+.footer {
+  background-color: rgba(25, 25, 25, 0.95);
+  font-size: 1.4rem;
+  width: 100%;
+  display: flex;
+  margin-top: 20rem;
+  justify-content: space-between; }
+  @media only screen and (max-width: 920px) {
+    .footer {
+      flex-direction: column;
+      text-align: center; } }
+  .footer-item {
+    text-decoration: none;
+    list-style-type: none;
+    padding: 2rem 2rem;
+    vertical-align: middle;
+    text-align: left;
+    color: rgba(211, 211, 211, 0.85);
+    line-height: 3rem; }
+    @media only screen and (max-width: 920px) {
+      .footer-item {
+        margin: 0 auto; } }
+
+/*mixins of main references*/
